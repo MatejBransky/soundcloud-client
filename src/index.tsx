@@ -2,6 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import './styles.scss';
-import TimerView from './TimerView';
+import Stream from './components/Stream';
 
-render(<TimerView />, document.getElementById('app'));
+render(
+  <Stream tracks={[{ title: 'Alenka je mezulan' }]} />,
+  document.getElementById('app')
+);

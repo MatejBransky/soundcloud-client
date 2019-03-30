@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import TimerView from '@/TimerView';
+import Stream from '@/components/Stream';
 
 test('TimerView', () => {
-  const { debug } = render(<TimerView />);
+  const { debug } = render(
+    <Stream tracks={[{ title: 'Foo' }, { title: 'Bar' }]} />
+  );
   debug();
 });
